@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cadastro de Paciente</title>
+
+	<!---------- CSS ------------>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!--BEGIN #signup-form -->
+    <div id="signup-form">
+        
+        <!--BEGIN #subscribe-inner -->
+        <div id="signup-inner">
+        
+        	<div class="clearfix" id="header">
+        	
+        		<img id="signup-icon" src="./images/signup.png" alt="" />
+        
+                <h1>Editar Paciente</h1>
+
+            </div>
+			<p>Por favor, digite seu CPF abaixo.</p>
+
+            <form name="edit" id="edit" method="post">
+            	
+                <p>
+                <label for="cpf">CPF *</label>
+                <input id="cpf"  type="text" name="cpf" value="" />
+                </p>
+               
+                <p>
+                <button id="submit" onclick="btn1();">Submit</button>
+                </p>
+                <p>
+                <button id="exclude" onclick="btn2();" >Excluir</button>
+                </p>
+            </form>
+           		
+            
+
+            </div>
+        
+        <!--END #signup-inner -->
+        </div>
+        
+    <!--END #signup-form -->   
+    </div>
+<script type="text/javascript">
+function btn1() {
+	document.edit.action="edit.jsp";
+	document.forms.edit.submit();
+}
+function btn2() {
+	document.edit.action="exclude.jsp";
+	document.forms.edit.submit();
+}
+</script>
+</body>
+</html>
